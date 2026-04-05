@@ -1,39 +1,46 @@
 {
-  "updatedAt": "2026-04-05",
-  "editorNote": "Examples and evidence are refreshed separately from the authored core analysis.",
+  "updatedAt": "2025-04-27",
+  "editorNote": "Updated international examples and evidence for Land Value Tax based on curated sources, focusing on practical implementations and tax design considerations.",
   "examples": [
     {
-      "place": "Australian Capital Territory",
-      "status": "Long-term transition toward broader land-based rates",
-      "summary": "The ACT's tax reform programme is frequently cited in English-language LVT debates because it uses a long transition to reduce inefficient transaction taxes while increasing recurring rates on land, rather than attempting an overnight conversion to a pure LVT.",
+      "place": "Estonia",
+      "status": "Active",
+      "summary": "Estonia implements a national land tax applied to landowners or users, with tax rates set by local governments within legislated ranges. The tax is based on mass appraisals of land value conducted by the Land and Spatial Development Board. Payment deadlines and exemptions are regulated, and mechanisms exist to limit sharp increases in tax liabilities.",
       "lessons": [
-        "Gradual transition can make land-based reform more politically durable.",
-        "The case is strongest when reform clearly replaces weaker taxes rather than adding a separate burden on top."
+        "Estonia's approach demonstrates a structured land value tax system with clear administrative procedures, local rate-setting flexibility, and protections against sudden tax increases. The use of mass valuation supports consistent taxable value assessments."
+      ],
+      "sources": [
+        "Estonia - Land tax overview"
+      ]
+    },
+    {
+      "place": "Australian Capital Territory (ACT), Australia",
+      "status": "Transitioning",
+      "summary": "The ACT government is pursuing tax reform that includes a transition away from transaction-based taxes toward land-based taxation. This reflects a policy shift to enhance tax efficiency and stability of revenue sources.",
+      "lessons": [
+        "Transitioning to land-based taxes can reduce reliance on volatile transaction taxes and improve fiscal sustainability. Careful design is needed to manage impacts during the transition."
       ],
       "sources": [
         "ACT Revenue Office - Tax reform"
       ]
     },
     {
-      "place": "Estonia",
-      "status": "National land tax",
-      "summary": "Estonia is regularly cited as an example of a country using a land tax rather than a conventional tax on buildings, showing that site-value-based systems can operate at national scale when cadastre and valuation systems are in place.",
+      "place": "United Kingdom",
+      "status": "Contextual",
+      "summary": "The UK tax system context includes considerations of land and property taxation efficiency. While the UK does not currently have a pure land value tax, research highlights the potential for land value taxation to improve tax design and economic neutrality.",
       "lessons": [
-        "Administrative capacity and up-to-date land records are a precondition for credibility.",
-        "Even where land taxation exists, design details and local exemptions shape real-world outcomes."
+        "UK analysis underscores the importance of efficient tax design and the potential benefits of land value taxes in reducing economic distortions compared to traditional property taxes."
       ],
       "sources": [
-        "Estonia - Land tax overview",
-        "Lincoln Institute - Land value tax overview"
+        "IFS - Taxing land and property efficiently"
       ]
     },
     {
-      "place": "Pennsylvania local split-rate taxation",
-      "status": "Local property-tax reform history",
-      "summary": "Pennsylvania municipalities have often appeared in LVT literature because split-rate systems taxed land at higher rates than buildings, offering a partial example of how governments can move toward taxing site value more heavily without fully abandoning conventional property taxation.",
+      "place": "Various Countries and U.S. Municipalities",
+      "status": "Implemented",
+      "summary": "Over 30 countries and several U.S. municipalities have implemented land value taxes as alternatives or supplements to traditional property taxes. Best practices include phased implementation, use of accurate assessment methods, and tax credits to protect land-rich but income-poor taxpayers.",
       "lessons": [
-        "Hybrid systems are often more politically achievable than pure models.",
-        "Local results depend on valuation quality and the broader fiscal environment, so example transferability is limited."
+        "Successful land value tax implementation requires careful assessment practices, gradual introduction of dual tax rates, and social equity considerations to mitigate adverse impacts on vulnerable groups."
       ],
       "sources": [
         "Lincoln Institute - Land value tax overview"
@@ -42,26 +49,24 @@
   ],
   "analysis": [
     {
-      "title": "LVT is strongest as a replacement reform",
-      "summary": "Comparative debates consistently suggest that land-value taxation is easier to defend when it replaces more distortionary taxes such as stamp duty or taxes on structures, rather than appearing as a stand-alone extra charge.",
-      "sources": [
-        "IFS - Taxing land and property efficiently",
-        "ACT Revenue Office - Tax reform"
-      ]
-    },
-    {
-      "title": "Valuation capacity is the real implementation bottleneck",
-      "summary": "The theoretical efficiency case for taxing land is strong, but real-world implementation depends on credible valuation systems, a clear cadastre, and an appeals framework that people trust.",
+      "title": "International Implementation and Best Practices",
+      "summary": "Land value taxation has been adopted in diverse jurisdictions with varying approaches. Key factors for effective implementation include reliable land valuation systems, local flexibility in rate setting, phased introduction strategies, and mechanisms to protect low-income or land-rich taxpayers. These elements help balance revenue generation with fairness and economic efficiency.",
       "sources": [
         "Lincoln Institute - Land value tax overview",
-        "Tax Foundation - Land Value Taxation Explained"
+        "Estonia - Land tax overview"
       ]
     },
     {
-      "title": "Transition politics often dominate tax-theory arguments",
-      "summary": "Where property taxes are already politically sensitive, the decisive issue is usually not whether land is an efficient base in principle, but whether governments can phase in change without destabilising households, local revenues, or expectations about housing wealth.",
+      "title": "Tax Design and Economic Efficiency",
+      "summary": "Land value taxes are recognized for their economic neutrality compared to other tax forms, as they tax an immobile asset and do not distort labor or investment decisions. The UK context highlights the potential for land value taxation to improve tax efficiency and reduce economic distortions inherent in traditional property taxes.",
       "sources": [
-        "IFS - Taxing land and property efficiently",
+        "IFS - Taxing land and property efficiently"
+      ]
+    },
+    {
+      "title": "Transitioning from Transaction Taxes to Land-Based Taxes",
+      "summary": "Some jurisdictions, such as the ACT in Australia, are shifting from transaction-based taxes to land-based taxes to stabilize revenue and improve tax system efficiency. This transition requires careful policy design to manage impacts on taxpayers and maintain fiscal balance.",
+      "sources": [
         "ACT Revenue Office - Tax reform"
       ]
     }
@@ -69,15 +74,15 @@
   "sourceDirectory": [
     {
       "label": "IFS - Taxing land and property efficiently",
-      "url": "https://ifs.org.uk/publications/taxing-land-and-property-efficiently"
+      "url": "https://ifs.org.uk/books/16-taxation-land-and-property"
     },
     {
       "label": "Lincoln Institute - Land value tax overview",
-      "url": "https://www.lincolninst.edu/publications/articles/land-value-tax-overview/"
+      "url": "https://www.lincolninst.edu/publications/policy-focus-reports/assessing-theory-practice-land-value-taxation/"
     },
     {
       "label": "Tax Foundation - Land Value Taxation Explained",
-      "url": "https://taxfoundation.org/research/all/federal/land-value-tax/"
+      "url": "https://taxfoundation.org/research/all/state/property-taxes-guide/"
     },
     {
       "label": "ACT Revenue Office - Tax reform",

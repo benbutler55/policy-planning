@@ -39,15 +39,37 @@ async function main() {
 async function buildEvidenceFromSources(registry) {
   const excerpts = [];
 
+  const fetchFailures = [];
+
   for (const source of registry.sources) {
-    const content = await fetchSourceExcerpt(source.url);
-    excerpts.push({
-      label: source.label,
-      publisher: source.publisher,
-      url: source.url,
-      notes: source.notes,
-      excerpt: content
-    });
+    try {
+      const content = await fetchSourceExcerpt(source.url);
+      excerpts.push({
+        label: source.label,
+        publisher: source.publisher,
+        url: source.url,
+        notes: source.notes,
+        excerpt: content
+      });
+    } catch (err) {
+      console.warn(`  ⚠ Skipping source '${source.label}': ${err.message}`);
+      fetchFailures.push(source.label);
+      excerpts.push({
+        label: source.label,
+        publisher: source.publisher,
+        url: source.url,
+        notes: source.notes,
+        excerpt: source.notes || ""
+      });
+    }
+  }
+
+  if (fetchFailures.length > 0) {
+    console.warn(`  ${fetchFailures.length} source(s) failed to fetch; using notes as fallback.`);
+  }
+
+  if (excerpts.every((e) => !e.excerpt)) {
+    throw new Error(`All sources failed to fetch for ${registry.policy}; cannot build evidence.`);
   }
 
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -69,11 +91,10 @@ async function buildEvidenceFromSources(registry) {
             "You update only the evidence layer of a policy-analysis site.",
             "Use only the provided sources.",
             "Never invent programmes, findings, or citations.",
-            "Return JSON with keys: updatedAt, editorNote, examples, analysis, sourceDirectory.",
+            "Return JSON with keys: updatedAt, editorNote, examples, analysis.",
             "examples must be an array of objects with place, status, summary, lessons, sources.",
             "analysis must be an array of objects with title, summary, sources.",
-            "sourceDirectory must preserve the provided sources as label/url pairs.",
-            "All sources listed in examples and analysis must exactly match labels from sourceDirectory.",
+            "All source labels in examples and analysis must exactly match labels from the provided sources.",
             "Write in concise neutral English suitable for a public policy website."
           ].join(" ")
         },
@@ -101,6 +122,14 @@ async function buildEvidenceFromSources(registry) {
   }
 
   const parsed = JSON.parse(content);
+  parsed.sourceDirectory = registry.sources.map((s) => ({ label: s.label, url: s.url }));
+
+  for (const example of parsed.examples || []) {
+    if (typeof example.lessons === "string") {
+      example.lessons = [example.lessons];
+    }
+  }
+
   validateEvidence(registry, parsed);
   return parsed;
 }
@@ -108,7 +137,7 @@ async function buildEvidenceFromSources(registry) {
 async function fetchSourceExcerpt(url) {
   const response = await fetch(url, {
     headers: {
-      "User-Agent": "policy-planning-refresh-bot/1.0"
+      "User-Agent": "Mozilla/5.0 (compatible; policy-planning/1.0; +https://github.com)"
     }
   });
 
