@@ -30,10 +30,8 @@ async function main() {
   await fs.mkdir(path.join(distDir, "assets"), { recursive: true });
   await fs.mkdir(path.join(distDir, "policies"), { recursive: true });
 
-  await fs.copyFile(
-    path.join(srcDir, "assets", "styles.css"),
-    path.join(distDir, "assets", "styles.css")
-  );
+  const rawCss = await fs.readFile(path.join(srcDir, "assets", "styles.css"), "utf8");
+  await fs.writeFile(path.join(distDir, "assets", "styles.css"), minifyCss(rawCss), "utf8");
   await fs.writeFile(path.join(distDir, ".nojekyll"), "", "utf8");
   await fs.writeFile(path.join(distDir, "index.html"), renderIndex(site, policies), "utf8");
 
@@ -41,6 +39,9 @@ async function main() {
     const outputPath = path.join(distDir, "policies", `${policy.slug}.html`);
     await fs.writeFile(outputPath, renderPolicyPage(site, policies, policy), "utf8");
   }
+
+  await fs.writeFile(path.join(distDir, "sitemap.xml"), renderSitemap(site, policies), "utf8");
+  await fs.writeFile(path.join(distDir, "robots.txt"), renderRobots(site), "utf8");
 
   console.log(`Built ${policies.length} policy pages into ${distDir}`);
 }
@@ -115,7 +116,7 @@ function renderIndex(site, policies) {
         ${renderTopBar(site, policies, "/index.html")}
       </div>
     </header>
-    <main class="page-shell">
+    <main id="main" class="page-shell">
       <section class="hero">
         <div class="hero__grid">
           <div class="hero__panel">
@@ -182,6 +183,7 @@ function renderIndex(site, policies) {
     description: site.description,
     basePath: site.basePath,
     assetVersion: site.assetVersion,
+    canonicalPath: joinUrl(site.basePath, "index.html"),
     body
   });
 }
@@ -324,7 +326,7 @@ function renderPolicyPage(site, policies, policy) {
         ${renderTopBar(site, policies, `/${policy.slug}`)}
       </div>
     </header>
-    <main class="page-shell">
+    <main id="main" class="page-shell">
       <div class="policy-layout">
         <aside class="policy-layout__toc">
           <a class="back-link" href="${joinUrl(site.basePath, "index.html")}">Back to the policy index</a>
@@ -358,6 +360,7 @@ function renderPolicyPage(site, policies, policy) {
     description: policy.summary,
     basePath: site.basePath,
     assetVersion: site.assetVersion,
+    canonicalPath: joinUrl(site.basePath, `policies/${policy.slug}.html`),
     body
   });
 }
@@ -460,7 +463,10 @@ function renderList(items) {
   `;
 }
 
-function renderDocument({ title, description, basePath, assetVersion, body }) {
+function renderDocument({ title, description, basePath, assetVersion, body, canonicalPath }) {
+  const siteUrl = "https://benbutler55.github.io";
+  const canonicalUrl = `${siteUrl}${canonicalPath}`;
+
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -468,12 +474,63 @@ function renderDocument({ title, description, basePath, assetVersion, body }) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeAttribute(description)}">
+    <link rel="canonical" href="${escapeAttribute(canonicalUrl)}">
+    <meta property="og:title" content="${escapeAttribute(title)}">
+    <meta property="og:description" content="${escapeAttribute(description)}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="${escapeAttribute(canonicalUrl)}">
+    <meta property="og:site_name" content="Policy Planning">
     <link rel="stylesheet" href="${joinUrl(basePath, 'assets/styles.css')}?v=${encodeURIComponent(assetVersion || '1')}">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     ${body}
   </body>
 </html>
+`;
+}
+
+function minifyCss(css) {
+  return css
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*([{}:;,])\s*/g, "$1")
+    .replace(/;}/g, "}")
+    .trim();
+}
+
+function renderSitemap(site, policies) {
+  const siteUrl = "https://benbutler55.github.io";
+  const today = new Date().toISOString().slice(0, 10);
+  const urls = [
+    { loc: joinUrl(site.basePath, "index.html"), priority: "1.0" },
+    ...policies.map((p) => ({
+      loc: joinUrl(site.basePath, `policies/${p.slug}.html`),
+      priority: "0.8"
+    }))
+  ];
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls
+  .map(
+    (u) => `  <url>
+    <loc>${siteUrl}${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <priority>${u.priority}</priority>
+  </url>`
+  )
+  .join("\n")}
+</urlset>
+`;
+}
+
+function renderRobots(site) {
+  const siteUrl = "https://benbutler55.github.io";
+  return `User-agent: *
+Allow: /
+
+Sitemap: ${siteUrl}${joinUrl(site.basePath, "sitemap.xml")}
 `;
 }
 

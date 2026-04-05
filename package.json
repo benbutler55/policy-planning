@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.js",
+    "serve": "node scripts/serve.js",
     "refresh:evidence": "node scripts/refresh-policy-evidence.js"
   },
   "engines": {

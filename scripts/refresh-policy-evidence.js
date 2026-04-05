@@ -138,7 +138,8 @@ async function fetchSourceExcerpt(url) {
   const response = await fetch(url, {
     headers: {
       "User-Agent": "Mozilla/5.0 (compatible; policy-planning/1.0; +https://github.com)"
-    }
+    },
+    signal: AbortSignal.timeout(10_000)
   });
 
   if (!response.ok) {

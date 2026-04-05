@@ -34,6 +34,24 @@ a {
   color: inherit;
 }
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 1000;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 0 0 12px 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .page-shell {
   width: min(calc(100% - 2rem), var(--max));
   margin: 0 auto;
