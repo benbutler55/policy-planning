@@ -1,0 +1,103 @@
+{
+  "slug": "land-value-tax",
+  "title": "Land Value Tax",
+  "summary": "A recurring tax on the unimproved value of land, designed to tax location value efficiently while encouraging more productive land use.",
+  "purpose": [
+    "Land Value Tax, or LVT, taxes the value of the land itself rather than the buildings or improvements on it. The policy aims to capture part of the economic value created by location, public infrastructure, and planning decisions rather than by the landowner's own effort.",
+    "Advocates argue that taxing land is efficient because land cannot be hidden or moved and because taxing the site value does not directly penalise productive investment in buildings. Critics focus on valuation difficulty, transition politics, and the distributional impact on asset-rich but cash-poor owners."
+  ],
+  "mechanics": [
+    "A pure LVT applies a recurring charge to the assessed site value of each parcel, excluding structures and other improvements. In principle, that means a vacant urban site in a prime location can face a high bill even if little is built on it.",
+    "The policy depends on regular valuation, a clear cadastre, appeals processes, and a strong administrative link between ownership records and billing. It is easier to defend when the tax base is broad and the valuation method is transparent.",
+    "Governments also need to decide whether LVT replaces existing taxes, sits alongside them, or emerges gradually through reforms to council tax, business rates, stamp duty, or other property-based taxes."
+  ],
+  "designChoices": [
+    {
+      "title": "Tax base and valuation system",
+      "paragraphs": [
+        "The biggest design issue is how land value is assessed separately from the structures on it. Mass appraisal is feasible, but the system must be updated regularly or the tax quickly loses fairness and political legitimacy.",
+        "Clear public rules on zoning, permitted use, and the treatment of agricultural or environmentally protected land are essential."
+      ]
+    },
+    {
+      "title": "Rate structure",
+      "paragraphs": [
+        "A single flat rate is easiest to explain, but governments may prefer differentiated rates for residential, commercial, or undeveloped land. Each exception makes the system less clean and creates new political margins to defend.",
+        "If revenue stability is the primary goal, a broad base with fewer reliefs is usually stronger than a high rate with many carve-outs."
+      ]
+    },
+    {
+      "title": "Interaction with existing property taxes",
+      "paragraphs": [
+        "LVT can replace transaction taxes such as stamp duty, recurring property taxes, or business-rate systems that discourage investment in improvements. The economic case is strongest when the reform swaps out more distortionary taxes.",
+        "Hybrid models are common in practice because governments often transition gradually rather than moving directly to a pure site-value tax."
+      ]
+    },
+    {
+      "title": "Deferrals, reliefs, and transition",
+      "paragraphs": [
+        "Cash-flow challenges are real for some owner-occupiers, farmers, charities, and land-intensive businesses. Deferral mechanisms can manage those pressures without abandoning the tax base altogether.",
+        "Transition policy should distinguish between temporary protection against sharp bill increases and permanent exemptions that hollow out the reform."
+      ]
+    }
+  ],
+  "benefits": [
+    "Taxes an immovable base, making avoidance harder than for many other taxes.",
+    "Does not directly penalise building, renovation, or other improvements to land.",
+    "Can discourage land banking and underuse in high-value locations.",
+    "Offers a strong candidate to replace more distortionary property transaction taxes.",
+    "Captures part of the value created by public investment, infrastructure, and planning decisions."
+  ],
+  "risks": [
+    "Separate land valuation is technically and politically demanding, especially where records are outdated.",
+    "Some households may face high liabilities relative to current cash income, creating pressure for deferrals or reliefs.",
+    "The policy can be unpopular if people experience it as a new tax rather than a replacement for weaker taxes.",
+    "Poorly designed exemptions can erode the base and undermine the efficiency case.",
+    "Valuation disputes and uneven local capacity can weaken confidence during rollout."
+  ],
+  "implementation": [
+    "LVT works best where land registries, valuation institutions, and appeals processes are already credible. If those systems are weak, the reform becomes more about state capacity than tax theory.",
+    "A transition plan should set out what tax burden is being shifted away from labour, transactions, or improvements and what is being shifted onto landowners. Without that clarity, the reform is easy to caricature as an arbitrary extra charge.",
+    "Gradualism is often sensible. Governments can start by updating valuations, broadening existing tax bases, reducing transaction taxes, and then moving toward a clearer site-value basis over time.",
+    "Place-specific distributional analysis matters. The same national design can have very different effects in city centres, declining towns, rural areas, and places where development is heavily constrained by planning rules."
+  ],
+  "recommendation": [
+    "The strongest UK recommendation is a phased move toward land-based property taxation rather than a sudden attempt to implement a pure textbook LVT overnight. A credible route would combine regular revaluation, replacement of stamp duty with a broader annual tax base, and eventual movement away from taxes that penalise improvement or mobility.",
+    "In the medium term, the UK should prioritise a system that is broad, transparent, and paired with limited deferral options for people facing cash-flow strain. That would preserve the efficiency gains of taxing land while reducing the risk of politically destabilising bill shocks.",
+    "A well-designed land-based tax reform is more persuasive when it is presented as part of a wider property-tax settlement, not as an isolated technocratic fix."
+  ],
+  "ukRelevance": {
+    "introduction": [
+      "The UK debate on LVT is closely tied to dissatisfaction with outdated council tax bands, the distortions created by stamp duty, and concerns that the planning system allows large location gains to accrue privately while infrastructure costs are socialised.",
+      "A UK-first framing also has to account for very different land markets across England, Scotland, Wales, and Northern Ireland, as well as the role of local government finance."
+    ],
+    "barriers": [
+      "The largest barrier is administrative and political transition. Any move toward LVT would force a confrontation with outdated valuations, winners and losers across regions, and long-standing resistance to property-tax reform.",
+      "A second barrier is public communication. Many people hear 'land tax' as a new burden unless the reform clearly explains what it is replacing and how deferrals will work.",
+      "A third barrier is institutional capacity. A durable system needs reliable valuation, appeals, billing, enforcement, and a clear fiscal settlement between central and local government."
+    ],
+    "interactions": [
+      "The most obvious interactions are with council tax, business rates, stamp duty land tax, and planning-gain mechanisms. A serious reform should explain whether LVT replaces, supplements, or sits alongside each of them.",
+      "If LVT is used to reduce stamp duty, it could improve labour mobility and reduce lock-in for households that stay in unsuitable housing because moving is too expensive.",
+      "If the reform also reduces taxes on structures or business improvements, it could strengthen the incentive to develop well-located sites more intensively where planning rules permit it."
+    ]
+  },
+  "coreSources": [
+    {
+      "label": "IFS - Taxing land and property efficiently",
+      "url": "https://ifs.org.uk/publications/taxing-land-and-property-efficiently"
+    },
+    {
+      "label": "Lincoln Institute - Land value tax overview",
+      "url": "https://www.lincolninst.edu/publications/articles/land-value-tax-overview/"
+    },
+    {
+      "label": "Tax Foundation - Land Value Taxation Explained",
+      "url": "https://taxfoundation.org/research/all/federal/land-value-tax/"
+    },
+    {
+      "label": "ACT Revenue Office - Tax reform",
+      "url": "https://www.revenue.act.gov.au/tax-reform"
+    }
+  ]
+}

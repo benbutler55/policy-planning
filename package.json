@@ -1,0 +1,13 @@
+{
+  "name": "policy-planning",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "refresh:evidence": "node scripts/refresh-policy-evidence.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

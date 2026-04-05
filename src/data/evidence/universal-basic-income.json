@@ -1,0 +1,107 @@
+{
+  "updatedAt": "2026-04-05",
+  "editorNote": "Examples and evidence are refreshed separately from the authored core analysis.",
+  "examples": [
+    {
+      "place": "Finland",
+      "status": "National randomised experiment",
+      "summary": "Finland tested a basic-income-style payment for unemployed participants, with the most widely cited findings showing improved wellbeing and limited headline employment effects relative to expectations of a dramatic labour-market shift.",
+      "lessons": [
+        "Basic income can improve recipients' reported wellbeing and confidence even when employment effects are modest.",
+        "Short-term experiments are useful for delivery learning but do not fully answer how a permanent national UBI would interact with taxation and wider services."
+      ],
+      "sources": [
+        "Kela - Results of Finland's basic income experiment",
+        "OECD - Basic Income as a Policy Option"
+      ]
+    },
+    {
+      "place": "Kenya",
+      "status": "Long-run cash transfer study",
+      "summary": "GiveDirectly's long-duration study in Kenya is one of the most prominent efforts to test long-term unconditional transfers at scale, with research focused on consumption, resilience, investment, and community-level effects over time.",
+      "lessons": [
+        "Longer-running transfers may tell policymakers more about adaptation, investment, and local spillovers than short pilot schemes.",
+        "Poverty-context cash studies are informative, but results should not be mapped mechanically onto high-income welfare states."
+      ],
+      "sources": [
+        "GiveDirectly - Universal Basic Income Programs"
+      ]
+    },
+    {
+      "place": "Alaska",
+      "status": "Permanent annual dividend rather than full UBI",
+      "summary": "Alaska's Permanent Fund Dividend is often cited in UBI debates because it shows how a universal cash payment linked to a shared asset can become politically durable, even though it is not large enough to function as a full income floor.",
+      "lessons": [
+        "Universal payments can attract durable public support when funded from a visible common-asset story.",
+        "A partial dividend model is politically and fiscally different from a full UBI intended to replace insecurity across the income distribution."
+      ],
+      "sources": [
+        "Alaska Permanent Fund Dividend overview"
+      ]
+    },
+    {
+      "place": "Stockton, California",
+      "status": "Guaranteed income city pilot",
+      "summary": "The Stockton Economic Empowerment Demonstration tested guaranteed income in a city setting and became influential in later US debates around no-strings-attached cash, financial volatility, and labour-market behaviour.",
+      "lessons": [
+        "Small city pilots can shape political narratives even when they are not full universal programmes.",
+        "Guaranteed income evidence is often strongest on income volatility and wellbeing rather than on proving a single universal national template."
+      ],
+      "sources": [
+        "SEED - Stockton final report"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "title": "Simplicity and responsiveness pull in opposite directions",
+      "summary": "International evidence keeps pointing to the same tension: flat universal payments are simple to administer and easy to understand, but households with high rent, disability-related costs, or care needs often still require layered support beyond any flat grant.",
+      "sources": [
+        "OECD - Basic Income as a Policy Option",
+        "IMF - Universal Basic Income and Work"
+      ]
+    },
+    {
+      "title": "Pilots are politically valuable but analytically limited",
+      "summary": "Experiments are useful for testing delivery, recipient experience, and some behavioural effects, but they do not fully reproduce the fiscal and macroeconomic environment of a permanent national reform funded through taxation.",
+      "sources": [
+        "Kela - Results of Finland's basic income experiment",
+        "GiveDirectly - Universal Basic Income Programs"
+      ]
+    },
+    {
+      "title": "Funding story matters as much as payment design",
+      "summary": "Comparative debates show that public support depends heavily on how a UBI is financed and what it replaces. The same headline payment can be understood as inclusive social insurance or as a route to cutting more responsive welfare institutions.",
+      "sources": [
+        "IMF - Universal Basic Income and Work",
+        "Institute for Fiscal Studies - Welfare reform analysis"
+      ]
+    }
+  ],
+  "sourceDirectory": [
+    {
+      "label": "OECD - Basic Income as a Policy Option",
+      "url": "https://www.oecd.org/els/emp/Basic-Income-Policy-Option-2017.pdf"
+    },
+    {
+      "label": "IMF - Universal Basic Income and Work",
+      "url": "https://www.imf.org/en/Publications/fandd/issues/2019/06/universal-basic-income-and-work"
+    },
+    {
+      "label": "Kela - Results of Finland's basic income experiment",
+      "url": "https://www.kela.fi/basic-income-experiment"
+    },
+    {
+      "label": "GiveDirectly - Universal Basic Income Programs",
+      "url": "https://www.givedirectly.org/ubi-study/"
+    },
+    {
+      "label": "Alaska Permanent Fund Dividend overview",
+      "url": "https://pfd.alaska.gov/"
+    },
+    {
+      "label": "SEED - Stockton final report",
+      "url": "https://www.stocktondemonstration.org/"
+    }
+  ]
+}

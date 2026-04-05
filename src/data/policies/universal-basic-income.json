@@ -1,0 +1,103 @@
+{
+  "slug": "universal-basic-income",
+  "title": "Universal Basic Income",
+  "summary": "A recurring cash payment made to individuals without a means test, intended to create a simple income floor and reduce insecurity.",
+  "purpose": [
+    "Universal Basic Income, or UBI, aims to guarantee a minimum level of cash income regardless of employment status, household structure, or recent earnings. The core policy purpose is to reduce poverty and insecurity while simplifying access to support.",
+    "Supporters see UBI as a way to strengthen bargaining power, cushion households against unstable labour markets, and make the welfare state less punitive. Critics argue that the same fiscal resources can often be targeted more effectively through narrower benefits and public services."
+  ],
+  "mechanics": [
+    "A full UBI is paid regularly, in cash, to each eligible person as an individual entitlement. It is normally unconditional, meaning it is not tied to job search, disability assessment, or household means testing.",
+    "Design choices matter as much as the label. A low flat payment may reduce hardship but fall short of covering basic living costs, while a higher payment quickly becomes fiscally expensive if it is genuinely universal.",
+    "In practice, governments must decide whether UBI sits alongside existing benefits, replaces some of them, or is introduced in stages for defined groups such as children, pensioners, or working-age adults."
+  ],
+  "designChoices": [
+    {
+      "title": "Eligibility and payment unit",
+      "paragraphs": [
+        "The cleanest model pays every legal resident or citizen individually rather than by household. That reduces complexity and avoids penalising people for forming or leaving relationships, but it raises questions about migrants, temporary residents, children, and people in institutional settings.",
+        "A UK system would also need a clear interface with devolved administrations, local authorities, and HMRC or DWP payment infrastructure."
+      ]
+    },
+    {
+      "title": "Relationship with the existing welfare state",
+      "paragraphs": [
+        "A UBI that replaces most means-tested support is simpler on paper but can leave disabled people, renters, and households with high care needs substantially worse off. A UBI that sits on top of existing support is safer socially, but much more expensive fiscally.",
+        "The central trade-off is between simplicity and responsiveness to different levels of need."
+      ]
+    },
+    {
+      "title": "Funding model",
+      "paragraphs": [
+        "Funding options include higher income taxes, consumption taxes, wealth or property taxation, carbon dividends, reduced tax expenditures, or partial replacement of existing cash transfers. Different funding mixes change who gains and who loses.",
+        "Net distributional outcomes matter more than the headline payment. A universal cash grant financed by broad tax rises can still leave many middle-income households roughly unchanged once taxes are accounted for."
+      ]
+    },
+    {
+      "title": "Payment level and indexation",
+      "paragraphs": [
+        "A low payment can improve resilience without acting as a full income floor. A higher payment is more transformative but sharply increases gross fiscal cost. Indexation rules are also crucial: a nominal payment that is not uprated can quickly lose real value.",
+        "Countries considering UBI need to decide whether the benchmark is poverty reduction, income security, labour-market flexibility, or administrative simplification, because each objective points toward a different payment level."
+      ]
+    }
+  ],
+  "benefits": [
+    "Reduces gaps in coverage created by complex eligibility rules and non-take-up.",
+    "Improves income predictability for households facing unstable hours, insecure work, or caregiving responsibilities.",
+    "Can reduce stigma and compliance burdens compared with conditional means-tested benefits.",
+    "May strengthen individuals' ability to refuse exploitative work or invest in training, care, or self-employment.",
+    "Provides a simple platform for sharing the gains from natural resources, data, or other common assets if those revenues exist."
+  ],
+  "risks": [
+    "A genuinely universal payment at meaningful levels is expensive and may require large tax increases or reductions elsewhere.",
+    "Replacing targeted support with a flat payment can harm disabled people, high-rent households, and people with complex needs.",
+    "A national UBI can be politically framed as cash in place of public services, which may weaken support for collective provision.",
+    "There is ongoing disagreement about labour-supply effects, and the impact is likely to differ across groups and payment levels.",
+    "The policy label covers very different schemes, making public debate vulnerable to confusion and overclaiming."
+  ],
+  "implementation": [
+    "Administrative simplicity is often overstated. The payment itself is simple, but identity checks, fraud controls, migration rules, taxation interactions, and the treatment of children or split families still require detailed system design.",
+    "Transition design is politically sensitive. Households judge reform on net outcomes, not on the elegance of the concept, so any move to UBI needs transparent modelling of winners and losers.",
+    "Pilots can test delivery and behavioural effects, but many pilot results do not scale neatly to permanent national systems. Small trials cannot fully replicate the tax changes, housing-market effects, or political responses associated with a permanent UBI.",
+    "Communication matters. If the policy is recommended as part of a broader package, governments need to explain what remains targeted, what is replaced, and why the final design is not simply a flat cheque to everyone."
+  ],
+  "recommendation": [
+    "The strongest UK case is not for an abrupt replacement of the welfare state with a full universal payment. A more credible recommendation is a phased income-floor reform that uses UBI principles - individual entitlement, regular payment, and low conditionality - while preserving or strengthening targeted support for disability, housing, and care.",
+    "A realistic first phase could focus on narrower universal cash layers, such as a stronger child payment, a citizen dividend funded from a specific revenue stream, or a geographically limited demonstration linked to tax and benefit modelling. That approach would generate evidence without forcing an all-or-nothing national redesign.",
+    "If the UK were to move further, the policy should be judged on net distribution, fiscal sustainability, and whether it complements rather than displaces high-value public services."
+  ],
+  "ukRelevance": {
+    "introduction": [
+      "In the UK, UBI is most often discussed as an answer to insecure work, high benefit complexity, and poor take-up of means-tested support. It also appears in debates about automation, regional inequality, and how to support unpaid care.",
+      "Any UK pathway would need close coordination across HM Treasury, HMRC, DWP, and devolved governments, especially if the system altered Universal Credit or interacted with devolved social-security powers."
+    ],
+    "barriers": [
+      "The main barrier is fiscal scale. A meaningful payment to every adult produces a very large gross cost, even when much of that cost is clawed back through tax.",
+      "A second barrier is coalition politics: a scheme that looks too generous to higher earners or too thin for households with high needs can lose support from both left and right.",
+      "A third barrier is transition risk. Existing claimants will ask whether they are protected, and that question cannot be answered well without detailed microsimulation."
+    ],
+    "interactions": [
+      "The most important interaction is with Universal Credit, which already acts as a means-tested income floor. A UBI layer would change work incentives, tapers, and take-up differently depending on whether Universal Credit is retained above it.",
+      "Housing support and disability support should not be treated as optional add-ons. UK housing costs and disability-related needs vary too widely for a flat universal payment to substitute for them cleanly.",
+      "Funding choices would also shape the politics. UBI financed partly through property taxation, carbon revenues, or reduced tax expenditures would distribute gains and losses differently from one financed through higher basic-rate income tax."
+    ]
+  },
+  "coreSources": [
+    {
+      "label": "OECD - Basic Income as a Policy Option",
+      "url": "https://www.oecd.org/els/emp/Basic-Income-Policy-Option-2017.pdf"
+    },
+    {
+      "label": "IMF - Universal Basic Income and Work",
+      "url": "https://www.imf.org/en/Publications/fandd/issues/2019/06/universal-basic-income-and-work"
+    },
+    {
+      "label": "Kela - Results of Finland's basic income experiment",
+      "url": "https://www.kela.fi/basic-income-experiment"
+    },
+    {
+      "label": "Institute for Fiscal Studies - Welfare reform analysis",
+      "url": "https://ifs.org.uk/"
+    }
+  ]
+}

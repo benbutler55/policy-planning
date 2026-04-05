@@ -1,0 +1,91 @@
+{
+  "updatedAt": "2026-04-05",
+  "editorNote": "Examples and evidence are refreshed separately from the authored core analysis.",
+  "examples": [
+    {
+      "place": "Australian Capital Territory",
+      "status": "Long-term transition toward broader land-based rates",
+      "summary": "The ACT's tax reform programme is frequently cited in English-language LVT debates because it uses a long transition to reduce inefficient transaction taxes while increasing recurring rates on land, rather than attempting an overnight conversion to a pure LVT.",
+      "lessons": [
+        "Gradual transition can make land-based reform more politically durable.",
+        "The case is strongest when reform clearly replaces weaker taxes rather than adding a separate burden on top."
+      ],
+      "sources": [
+        "ACT Revenue Office - Tax reform"
+      ]
+    },
+    {
+      "place": "Estonia",
+      "status": "National land tax",
+      "summary": "Estonia is regularly cited as an example of a country using a land tax rather than a conventional tax on buildings, showing that site-value-based systems can operate at national scale when cadastre and valuation systems are in place.",
+      "lessons": [
+        "Administrative capacity and up-to-date land records are a precondition for credibility.",
+        "Even where land taxation exists, design details and local exemptions shape real-world outcomes."
+      ],
+      "sources": [
+        "Estonia - Land tax overview",
+        "Lincoln Institute - Land value tax overview"
+      ]
+    },
+    {
+      "place": "Pennsylvania local split-rate taxation",
+      "status": "Local property-tax reform history",
+      "summary": "Pennsylvania municipalities have often appeared in LVT literature because split-rate systems taxed land at higher rates than buildings, offering a partial example of how governments can move toward taxing site value more heavily without fully abandoning conventional property taxation.",
+      "lessons": [
+        "Hybrid systems are often more politically achievable than pure models.",
+        "Local results depend on valuation quality and the broader fiscal environment, so example transferability is limited."
+      ],
+      "sources": [
+        "Lincoln Institute - Land value tax overview"
+      ]
+    }
+  ],
+  "analysis": [
+    {
+      "title": "LVT is strongest as a replacement reform",
+      "summary": "Comparative debates consistently suggest that land-value taxation is easier to defend when it replaces more distortionary taxes such as stamp duty or taxes on structures, rather than appearing as a stand-alone extra charge.",
+      "sources": [
+        "IFS - Taxing land and property efficiently",
+        "ACT Revenue Office - Tax reform"
+      ]
+    },
+    {
+      "title": "Valuation capacity is the real implementation bottleneck",
+      "summary": "The theoretical efficiency case for taxing land is strong, but real-world implementation depends on credible valuation systems, a clear cadastre, and an appeals framework that people trust.",
+      "sources": [
+        "Lincoln Institute - Land value tax overview",
+        "Tax Foundation - Land Value Taxation Explained"
+      ]
+    },
+    {
+      "title": "Transition politics often dominate tax-theory arguments",
+      "summary": "Where property taxes are already politically sensitive, the decisive issue is usually not whether land is an efficient base in principle, but whether governments can phase in change without destabilising households, local revenues, or expectations about housing wealth.",
+      "sources": [
+        "IFS - Taxing land and property efficiently",
+        "ACT Revenue Office - Tax reform"
+      ]
+    }
+  ],
+  "sourceDirectory": [
+    {
+      "label": "IFS - Taxing land and property efficiently",
+      "url": "https://ifs.org.uk/publications/taxing-land-and-property-efficiently"
+    },
+    {
+      "label": "Lincoln Institute - Land value tax overview",
+      "url": "https://www.lincolninst.edu/publications/articles/land-value-tax-overview/"
+    },
+    {
+      "label": "Tax Foundation - Land Value Taxation Explained",
+      "url": "https://taxfoundation.org/research/all/federal/land-value-tax/"
+    },
+    {
+      "label": "ACT Revenue Office - Tax reform",
+      "url": "https://www.revenue.act.gov.au/tax-reform"
+    },
+    {
+      "label": "Estonia - Land tax overview",
+      "url": "https://www.emta.ee/en/private-client/taxes-and-payment/other-taxes/land-tax"
+    }
+  ]
+}

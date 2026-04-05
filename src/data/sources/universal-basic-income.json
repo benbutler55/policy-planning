@@ -1,0 +1,42 @@
+{
+  "policy": "universal-basic-income",
+  "refreshPromptContext": "Refresh only the international examples and evidence sections for Universal Basic Income. Keep a neutral tone, include citations to the curated sources, and do not rewrite the policy's core recommendations.",
+  "sources": [
+    {
+      "label": "OECD - Basic Income as a Policy Option",
+      "publisher": "OECD",
+      "url": "https://www.oecd.org/els/emp/Basic-Income-Policy-Option-2017.pdf",
+      "notes": "Comparative policy framing and fiscal trade-offs."
+    },
+    {
+      "label": "IMF - Universal Basic Income and Work",
+      "publisher": "IMF",
+      "url": "https://www.imf.org/en/Publications/fandd/issues/2019/06/universal-basic-income-and-work",
+      "notes": "Work incentives and policy framing."
+    },
+    {
+      "label": "Kela - Results of Finland's basic income experiment",
+      "publisher": "Kela",
+      "url": "https://www.kela.fi/basic-income-experiment",
+      "notes": "Finland experiment design and outcomes."
+    },
+    {
+      "label": "GiveDirectly - Universal Basic Income Programs",
+      "publisher": "GiveDirectly",
+      "url": "https://www.givedirectly.org/ubi-study/",
+      "notes": "Long-run UBI-style cash study in Kenya and related programmes."
+    },
+    {
+      "label": "Alaska Permanent Fund Dividend overview",
+      "publisher": "State of Alaska",
+      "url": "https://pfd.alaska.gov/",
+      "notes": "Universal dividend example, not a full UBI."
+    },
+    {
+      "label": "SEED - Stockton final report",
+      "publisher": "SEED",
+      "url": "https://www.stocktondemonstration.org/",
+      "notes": "City-level guaranteed income pilot."
+    }
+  ]
+}
