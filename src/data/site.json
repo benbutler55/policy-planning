@@ -1,6 +1,7 @@
 {
   "name": "Policy Planning",
   "basePath": "/policy-planning",
+  "assetVersion": "20260405-2",
   "tagline": "Detailed analysis of policies governments can enact.",
   "description": "A UK-first policy analysis site with global evidence, examples, and implementation detail.",
   "mission": "Policy Planning publishes structured, readable analysis of major public-policy options, combining authored assessment with regularly refreshed evidence from around the world.",

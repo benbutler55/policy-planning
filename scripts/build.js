@@ -181,6 +181,7 @@ function renderIndex(site, policies) {
     title: site.name,
     description: site.description,
     basePath: site.basePath,
+    assetVersion: site.assetVersion,
     body
   });
 }
@@ -356,6 +357,7 @@ function renderPolicyPage(site, policies, policy) {
     title: `${policy.title} | ${site.name}`,
     description: policy.summary,
     basePath: site.basePath,
+    assetVersion: site.assetVersion,
     body
   });
 }
@@ -458,7 +460,7 @@ function renderList(items) {
   `;
 }
 
-function renderDocument({ title, description, basePath, body }) {
+function renderDocument({ title, description, basePath, assetVersion, body }) {
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -466,7 +468,7 @@ function renderDocument({ title, description, basePath, body }) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>${escapeHtml(title)}</title>
     <meta name="description" content="${escapeAttribute(description)}">
-    <link rel="stylesheet" href="${joinUrl(basePath, 'assets/styles.css')}">
+    <link rel="stylesheet" href="${joinUrl(basePath, 'assets/styles.css')}?v=${encodeURIComponent(assetVersion || '1')}">
   </head>
   <body>
     ${body}

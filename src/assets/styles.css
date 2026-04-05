@@ -381,6 +381,7 @@ p {
 }
 
 .site-footer {
+  width: min(calc(100% - 2rem), var(--max));
   margin: 0 auto 1.5rem;
   display: flex;
   justify-content: space-between;
