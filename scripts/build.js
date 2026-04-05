@@ -401,17 +401,17 @@ function renderFooter(site) {
 }
 
 function renderSources(policy) {
-  const combined = [...(policy.coreSources ?? []), ...(policy.evidence.sourceDirectory ?? [])];
-  const unique = [];
-  const seen = new Set();
+  const byLabel = new Map();
 
-  for (const source of combined) {
-    const key = `${source.label}|${source.url}`;
-    if (!seen.has(key)) {
-      seen.add(key);
-      unique.push(source);
-    }
+  for (const source of policy.coreSources ?? []) {
+    byLabel.set(source.label, source);
   }
+
+  for (const source of policy.evidence.sourceDirectory ?? []) {
+    byLabel.set(source.label, source);
+  }
+
+  const unique = [...byLabel.values()];
 
   return `
     <ul class="source-list">
