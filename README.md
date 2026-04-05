@@ -6,13 +6,13 @@ Policy Planning is a static editorial website about policies that governments ca
 
 - `src/data/policies/`: authored core policy analysis
 - `src/data/evidence/`: refreshable examples and evidence for each policy
-- `src/data/sources/`: curated source registries used by the weekly refresh workflow
+- `src/data/sources/`: curated source registries used by the manual refresh command
 - `src/assets/`: shared frontend assets for the generated site
 - `scripts/build.js`: generates the static site into `dist/`
 - `scripts/refresh-policy-evidence.js`: fetches curated sources and uses OpenAI to refresh evidence sections
 - `docs/`: technical documentation kept separate from the published website
 - `.github/workflows/deploy-pages.yml`: GitHub Pages deployment workflow
-- `.github/workflows/refresh-evidence.yml`: scheduled weekly evidence refresh workflow
+- `.claude/commands/policy-updater.md`: manual slash command for refreshing policy evidence
 
 ## Published Site Boundary
 
@@ -38,6 +38,12 @@ To run the evidence refresh locally:
 OPENAI_API_KEY=your_key npm run refresh:evidence
 ```
 
+To refresh a single policy only:
+
+```bash
+OPENAI_API_KEY=your_key npm run refresh:evidence -- universal-basic-income
+```
+
 Optional environment variables:
 
 - `OPENAI_MODEL`: defaults to `gpt-4.1-mini`
@@ -51,29 +57,38 @@ Optional environment variables:
 
 The build script discovers policy files automatically and will add the new page to the index.
 
-## Evidence Refresh Workflow
+## Evidence Refresh
 
-The weekly workflow does the following:
+The manual refresh flow does the following:
 
 1. Reads curated source registries for each policy.
 2. Fetches the approved source pages.
 3. Sends the source material to OpenAI for synthesis.
 4. Updates only the evidence/examples JSON files.
 5. Rebuilds the site.
-6. Commits and pushes refreshed evidence back to `main`.
 
-The workflow is designed to fail clearly if sources cannot be fetched or if the model response is missing structured citations.
+The refresh script is designed to fail clearly if sources cannot be fetched or if the model response is missing structured citations.
+
+## Slash Command
+
+This repo includes a custom Claude slash command:
+
+- `/policy-updater`
+
+Use it to run the evidence refresh manually. It is intended to:
+
+1. Refresh all policy evidence, or a single policy if given a slug.
+2. Rebuild the site.
+3. Review changes.
+4. Commit and push the update.
 
 ## GitHub Setup
 
 Repository: `https://github.com/benbutler55/policy-planning`
 
-Required repository secret:
+GitHub Pages is deployed from the `deploy-pages.yml` workflow using the generated `dist/` artifact.
+
+To run the refresh locally or through the slash command, the environment should provide:
 
 - `OPENAI_API_KEY`
-
-Optional repository variable or secret:
-
-- `OPENAI_MODEL`
-
-GitHub Pages is deployed from the `deploy-pages.yml` workflow using the generated `dist/` artifact.
+- optional `OPENAI_MODEL`

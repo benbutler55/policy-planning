@@ -6,7 +6,7 @@ The repository uses a small Node-based static site generator instead of hand-mai
 
 - Authored policy analysis lives in `src/data/policies/`.
 - Refreshable global examples and evidence live in `src/data/evidence/`.
-- Curated source lists for the evidence refresh job live in `src/data/sources/`.
+- Curated source lists for the evidence refresh command live in `src/data/sources/`.
 
 This split keeps the long-lived editorial judgement separate from the automatically refreshed evidence layer.
 
@@ -29,6 +29,8 @@ This split keeps the long-lived editorial judgement separate from the automatica
 3. Sends the combined source excerpts to OpenAI.
 4. Requires a structured JSON response containing examples, analysis, and citations.
 5. Rewrites only the matching evidence JSON file.
+
+The script can refresh all policies or a single policy slug passed on the command line.
 
 ## Publishing Boundary
 

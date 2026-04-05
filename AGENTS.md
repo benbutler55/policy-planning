@@ -16,4 +16,4 @@ This repository contains a generated static website about government policy anal
 4. Keep technical documentation completely separate from the published website.
 5. Do not place engineering notes, maintenance instructions, or operational details in the generated policy pages.
 6. Preserve citation traceability for any automated evidence refresh.
-7. The scheduled refresh should update evidence and examples only, not silently rewrite the authored core analysis without explicit instruction.
+7. Any manual evidence refresh should update evidence and examples only, not silently rewrite the authored core analysis without explicit instruction.

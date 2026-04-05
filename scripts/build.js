@@ -100,7 +100,7 @@ function renderIndex(site, policies) {
           </div>
           <p class="card__summary">${escapeHtml(policy.summary)}</p>
           <div class="card__meta">
-            <span class="pill">Weekly evidence refresh</span>
+            <span class="pill">Manual evidence refresh</span>
             <span class="pill">Updated ${escapeHtml(policy.evidence.updatedAt)}</span>
           </div>
           <a class="card__link" href="${joinUrl(site.basePath, `policies/${policy.slug}.html`)}">Read the full analysis</a>
@@ -130,7 +130,7 @@ function renderIndex(site, policies) {
             </div>
             <div class="metric">
               <strong>Editorial method</strong>
-              <span>Authored core analysis with a ${escapeHtml(site.refreshCadence.toLowerCase())} refresh of global examples and evidence.</span>
+              <span>Authored core analysis with manually refreshed global examples and evidence.</span>
             </div>
             <div class="metric">
               <strong>Geographic frame</strong>
@@ -165,7 +165,7 @@ function renderIndex(site, policies) {
           </article>
           <article class="note">
             <h3>Evidence Refresh</h3>
-            <p>Examples and comparative evidence are refreshed from a curated source list on a scheduled GitHub Actions job.</p>
+            <p>Examples and comparative evidence are refreshed from a curated source list through a manual slash command.</p>
           </article>
           <article class="note">
             <h3>Future Policies</h3>
@@ -389,7 +389,7 @@ function renderFooter(site) {
         <p>${escapeHtml(site.description)}</p>
       </div>
       <div>
-        <p>Built as a static GitHub Pages site with a weekly refresh of curated international evidence.</p>
+        <p>Built as a static GitHub Pages site with manually refreshed curated international evidence.</p>
       </div>
     </footer>
   `;

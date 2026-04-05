@@ -10,6 +10,7 @@ const evidenceDir = path.join(rootDir, "src", "data", "evidence");
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1-mini";
+const requestedPolicies = new Set(process.argv.slice(2).filter(Boolean));
 
 async function main() {
   if (!OPENAI_API_KEY) {
@@ -17,15 +18,23 @@ async function main() {
   }
 
   const sourceFiles = (await fs.readdir(sourcesDir)).filter((file) => file.endsWith(".json")).sort();
+  let registries = await Promise.all(sourceFiles.map((file) => readJson(path.join(sourcesDir, file))));
 
-  for (const file of sourceFiles) {
-    const registry = await readJson(path.join(sourcesDir, file));
+  if (requestedPolicies.size > 0) {
+    registries = registries.filter((registry) => requestedPolicies.has(registry.policy));
+    if (registries.length === 0) {
+      throw new Error(`No policy source registry matched: ${Array.from(requestedPolicies).join(", ")}`);
+    }
+  }
+
+  for (const registry of registries) {
     console.log(`Refreshing evidence for ${registry.policy}`);
     const evidence = await buildEvidenceFromSources(registry);
     const outputPath = path.join(evidenceDir, `${registry.policy}.json`);
     await fs.writeFile(outputPath, `${JSON.stringify(evidence, null, 2)}\n`, "utf8");
   }
 }
+
 
 async function buildEvidenceFromSources(registry) {
   const excerpts = [];

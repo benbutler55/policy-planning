@@ -102,9 +102,11 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .hero__panel,
+.hero__aside,
 .card,
 .policy-layout__toc,
 .policy-layout__article,
@@ -124,6 +126,17 @@ a {
 .policy-layout__article,
 .site-footer {
   padding: 1.5rem;
+}
+
+.hero__panel,
+.hero__aside {
+  height: 100%;
+}
+
+.hero__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .eyebrow {
