@@ -8,6 +8,14 @@ This repository contains a generated static website about government policy anal
 - The public site is for policy analysis only.
 - Technical implementation notes, workflow details, and maintenance documentation must stay outside the published website in `docs/`, workflow files, scripts, and other repository-only locations.
 
+## Environment Setup
+
+Before running any shell commands or scripts in this repository, source the `.env` file to load required API keys (e.g. the OpenAI API key used by scripts):
+
+```sh
+source .env
+```
+
 ## Required Agent Rules
 
 1. Always commit completed changes to git.
