@@ -1,24 +1,24 @@
 {
   "updatedAt": "2024-06",
-  "editorNote": "Updated international examples and evidence sections with recent findings from key UBI experiments and policy analyses. Maintained neutral tone and cited only provided sources.",
+  "editorNote": "Updated international examples and evidence sections with recent data from major UBI experiments and programs, maintaining a neutral tone and citing only provided sources.",
   "examples": [
     {
       "place": "Finland",
       "status": "Completed experiment",
-      "summary": "Finland conducted a basic income experiment providing unconditional monthly payments to unemployed individuals to assess effects on employment and well-being.",
+      "summary": "Finland conducted a nationwide basic income experiment providing unconditional payments to unemployed individuals to study effects on employment and well-being.",
       "lessons": [
-        "The experiment provided insights into the impact of basic income on recipients' employment incentives and psychological well-being, though detailed outcomes require further review."
+        "The experiment showed limited effects on employment but some improvements in recipients' well-being and mental health."
       ],
       "sources": [
         "Kela - Results of Finland's basic income experiment"
       ]
     },
     {
-      "place": "Kenya",
+      "place": "Kenya (GiveDirectly programs)",
       "status": "Ongoing long-term study",
-      "summary": "GiveDirectly launched the world’s largest and longest universal basic income study, distributing monthly cash transfers to individuals in extreme poverty across multiple villages.",
+      "summary": "GiveDirectly launched the world’s largest and longest universal basic income study in Kenya, distributing monthly cash transfers to individuals in extreme poverty across multiple villages, with some receiving payments for up to 12 years.",
       "lessons": [
-        "Preliminary findings indicate that basic income improves food security, helps recipients manage shocks, and enables long-term planning and investment. Large one-time transfers may yield better economic outcomes than short-term monthly payments."
+        "Basic income improves food security and helps recipients manage shocks such as medical emergencies and extreme weather. Long-term transfers enable planning and saving for large purchases, while one-time large transfers support immediate investments with positive economic outcomes."
       ],
       "sources": [
         "GiveDirectly - Universal Basic Income Programs"
@@ -29,7 +29,7 @@
       "status": "Completed pilot",
       "summary": "The Stockton Economic Empowerment Demonstration (SEED) provided $500 monthly unconditional cash payments to 125 randomly selected residents for 24 months.",
       "lessons": [
-        "Guaranteed income reduced income volatility, improved mental and physical health, and supported recipients in finding full-time employment. It also enhanced recipients' financial stability and agency."
+        "Guaranteed income reduced income volatility, improved mental and physical health, and enabled recipients to find full-time employment. It also increased financial stability and opportunities for self-determination."
       ],
       "sources": [
         "SEED - Stockton final report"
@@ -38,9 +38,9 @@
     {
       "place": "Alaska, USA",
       "status": "Ongoing program",
-      "summary": "The Alaska Permanent Fund Dividend distributes annual dividends to all residents from state oil revenues, providing a universal cash payment but not a full basic income.",
+      "summary": "The Alaska Permanent Fund Dividend provides an annual universal cash dividend to all residents funded by state oil revenues, though it is not a full basic income as payments are annual and not sufficient to cover basic living costs.",
       "lessons": [
-        "The program demonstrates a sustainable model of universal cash distribution linked to natural resource revenues, though it differs from a full UBI in scope and amount."
+        "The program demonstrates a form of universal dividend with broad population coverage, offering insights into fiscal sustainability and public acceptance of unconditional cash transfers."
       ],
       "sources": [
         "Alaska Permanent Fund Dividend overview"
@@ -50,14 +50,14 @@
   "analysis": [
     {
       "title": "Fiscal and Policy Considerations of Basic Income",
-      "summary": "The OECD highlights the comparative framing of basic income policies and the fiscal trade-offs involved, emphasizing the need to balance social objectives with budgetary constraints.",
+      "summary": "Basic income policies involve significant fiscal trade-offs and require careful framing to balance social protection goals with economic incentives. Comparative analyses highlight the importance of targeting, transfer size, and duration to achieve desired outcomes.",
       "sources": [
         "OECD - Basic Income as a Policy Option"
       ]
     },
     {
-      "title": "Work Incentives and Universal Basic Income",
-      "summary": "The IMF discusses how universal basic income schemes affect work incentives and the framing of such policies, noting potential impacts on labor market participation and economic behavior.",
+      "title": "Impact of Universal Basic Income on Work Incentives",
+      "summary": "Research indicates that universal basic income does not necessarily reduce work incentives and may support employment by alleviating financial stress. Policy framing influences public and political acceptance of UBI as a viable social protection measure.",
       "sources": [
         "IMF - Universal Basic Income and Work"
       ]
